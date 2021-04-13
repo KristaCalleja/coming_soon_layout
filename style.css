@@ -75,12 +75,13 @@ input{
     padding: 1em 2em;
     border: none;
     border-radius: 50px;
+    cursor: pointer;
 }
 .btn:last-child{
     color: white;
     font-size: 13px;
 }
-@media (max-width: 375px){
+@media (min-width: 375px) and (max-width: 940px){
     .wrapper{
         display: block;
         background-image: linear-gradient(135deg, rgba(255,255,255), rgba(255,245,245));
