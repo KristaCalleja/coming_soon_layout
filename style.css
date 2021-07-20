@@ -27,7 +27,7 @@ body{
 }
 .text{
     border: 1px purple solid;
-    padding: 1em 1em;
+    padding: 1em;
 }
 .text h1:only-of-type{
     border: 1px red solid;
@@ -74,6 +74,12 @@ input{
 }
 .text-box::before{
     content: url(images/hero-mobile.jpg);
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 13px;
 }
 /* For desktop design */
 @media (min-width: 900px){ 
