@@ -83,4 +83,45 @@ footer{
 }
 /* For desktop design */
 @media (min-width: 900px){ 
+    .wrapper{
+        display: flex;
+    }
+    .wrapper div{
+        flex-basis: 50vw;
+    }
+    .right-scene{
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 90px;
+    }
+    .left-scene{
+        height: 100vh;
+        position: sticky;
+        background-image: url(images/hero-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        order: 2;
+    }
+    .text-box::before{
+        content: '';
+    }
+    .logo{
+        display: none;
+    }
+    .text-box::before{
+        content: url(images/logo.svg)
+    }
+    .text-box{
+        margin-top: 50px;
+        margin: auto;
+        max-width: 570px;
+        text-align: left;
+    }
+    .text-box * :not(.btn){
+        margin: 2em 0;
+    }
+    .text{
+        padding: 4.5em;
+    }
 }
