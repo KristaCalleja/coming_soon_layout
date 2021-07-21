@@ -44,7 +44,7 @@ span{
     padding: 0 1.6em;
 }
 .input-group form{
-    display: inline-flex;
+    display: flex;
     width: 100%;
     position: relative;
 }
@@ -78,6 +78,15 @@ input:focus{
 }
 .helper{
     color: var(--soft-red);
+}
+.error{
+    position: absolute;
+    top: 12px;
+    right: 90px;
+    display: none;
+}
+.error-active{
+    display: inline-block;
 }
 footer{
     position: fixed;
