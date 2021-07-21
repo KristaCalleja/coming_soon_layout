@@ -82,22 +82,22 @@ footer{
     .wrapper{
         display: flex;
     }
-    .wrapper div{
-        flex-basis: 50vw;
-        height: 100%;
+    .wrapper div:first-of-type{
+        flex-basis: 40vw;
+    }
+    .wrapper div:nth-child(2n){
+        flex-basis: 60vw;
     }
     .right-scene{
         background-image: url(images/bg-pattern-desktop.svg);
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 90px;
-        position: sticky;
     }
     .left-scene{
-        height: 100%;
-        position: sticky;
+        height: 100vh;
         background-image: url(images/hero-desktop.jpg);
-        background-size: contain;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         order: 2;
     }
@@ -108,7 +108,7 @@ footer{
         display: none;
     }
     .text-box::before{
-        content: url(images/logo.svg)
+        content: url(images/logo.svg);
     }
     .text-box{
         margin-top: 50px;
@@ -116,10 +116,18 @@ footer{
         max-width: 570px;
         text-align: left;
     }
-    .text-box * :not(.btn){
-        margin: 2em 0;
-    }
     .text-box h1:first-child{
         padding: 0 2em 0 0;
     }
+    .text-box p:only-of-type{
+        padding: 0 7em 0 0;
+    }
+    .text {
+        padding-top: 125px;
+    }
+    form:not(.btn){
+        margin-top: 50px;
+        max-width: 435px;    
+    }
+
 }
