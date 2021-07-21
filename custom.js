@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 const inputText = document.getElementById("input");
+// The following regexp contains an escaping for the backtick informed at column 53.
 const regex = new RegExp(`^[a-zA-Z0-9.!#$%&'*+/=?^_\`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$`);
 const btn = document.querySelector('.btn');
 const errorIcon = document.querySelector('.error');
