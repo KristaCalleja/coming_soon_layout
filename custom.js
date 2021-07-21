@@ -1,22 +1,39 @@
 const form = document.getElementById("form");
-const emailElement = document.getElementById("input");
-const errorElement = document.getElementById('error');
-const correctEmail = "janeappleseed@email.com";
+const inputText = document.getElementById("input");
+const regex = new RegExp(`/.+@.+\.\w{2,3}/`);
+const btn = document.querySelector('.btn');
 
-form.addEventListener("submit", (event) => {
-    let messages = [] 
+function validateEmail(){
+    // Check values
+    const string = inputText.value;
+    const checkRegex = regex.test(string); 
 
-    if (emailElement.value === '' || emailElement.value == null) {
-        messages.push('This field cannot be blank')
-    }
+    // Create new elements in form
+    const helper = document.createElement('div');
+    const errorIcon = document.createElement('img');
 
-    if (emailElement.value === correctEmail) {
-        messages.push('Welcome onboard! :-)')
+    // Style new div
+    helper.classList.add('helper');
+    errorIcon.src = "images/icon-error.svg";
+    
+    // Manipulate the DOM
+    if (checkRegex === true) {
+        helper.innerText = 'Welcome aboard! ❣';
+        form.insertAdjacentElement('afterend', helper);
     }
     else {
-        messages.push('Please provide a valid email')
+        helper.innerText = 'Please provide a valid email.';
+        form.insertAdjacentElement('afterend', helper);
+        form.insertAdjacentElement('afterbegin', errorIcon);
     }
+}
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    validateEmail();
+});
 
-    event.preventDefault()
-    errorElement.innerText = messages.join('! ')
-})
+// Error handler
+function handleError(err){
+    console.log('Error');
+    console.log(err);
+}
