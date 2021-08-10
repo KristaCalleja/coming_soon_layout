@@ -20,13 +20,14 @@ function validateEmail(){
     if (checkRegex === true) {
         helper.innerText = 'Welcome aboard! ❣';
         form.insertAdjacentElement('afterend', helper);
-    }
-    else {
+    } else {
         helper.innerText = 'Please provide a valid email.';
         form.insertAdjacentElement('afterend', helper);
         errorIcon.classList.add('error-active');
     }
 }
+
+
 form.addEventListener('submit', function(event){
     event.preventDefault();
     validateEmail();
