@@ -20,6 +20,7 @@ function validateEmail(){
     if (checkRegex === true) {
         helper.innerText = 'Welcome aboard! ❣';
         form.insertAdjacentElement('afterend', helper);
+        errorIcon.classList.remove('error-active');
     } else {
         helper.innerText = 'Please provide a valid email.';
         form.insertAdjacentElement('afterend', helper);
